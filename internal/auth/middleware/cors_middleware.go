@@ -78,7 +78,7 @@ func AccessLog(ctx *context.Context) {
 	clientIP := ctx.Input.IP()
 	userAgent := ctx.Request.Header.Get("User-Agent")
 	
-	// // 记录访问日志
-	// logs.Info("[ACCESS] %s %s - IP: %s - UA: %s - Time: %s", 
-	// 	method, path, clientIP, userAgent, startTime.Format("2006-01-02 15:04:05"))
+	// 记录访问日志
+	logs.Info("[ACCESS] %s %s - IP: %s - UA: %s - Time: %s", 
+		method, path, clientIP, userAgent, startTime.Format("2006-01-02 15:04:05"))
 }
